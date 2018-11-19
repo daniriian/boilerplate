@@ -1,0 +1,52 @@
+// /***************************
+// Hero Modules
+// *************************** //***************************
+
+// Hero Modules ***************************/
+// .hero {
+//     text-align: center;
+// }
+
+// .hero-primary {
+//     background-color: #594a42;
+//     color: white;
+//     padding-top: 25px;
+//     padding-bottom: 25px;
+
+//     @include small-and-above {
+//         padding-top: 150px;
+//         min-height: 350px;
+//     }
+// }
+
+// .hero-primary.bg-image>img {
+//     opacity: 0.55;
+// }
+
+// .hero-body {
+//     position: relative;
+// }
+
+// .hero-title {
+//     margin-top: 25px;
+//     margin-bottom: 25px;
+//     font-size: 2.625em;
+// }
+
+// .hero-subtitle {
+//     margin-top: 25px;
+//     margin-bottom: 25px;
+//     font-size: 1.500em;
+//     font-weight: normal;
+// }
+
+// .hero-subtitle+button {
+//     margin-top: 25px;
+// }
+
+.hero {
+    width: 100%;
+    height: 540px;
+    background-image: url('/images/bg-slider7.jpg');
+    background-size: cover;
+}
