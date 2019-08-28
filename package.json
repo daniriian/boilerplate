@@ -4,15 +4,19 @@
   "main": "index.js",
   "scripts": {
     "live": "live-server --ignore='scss'",
-    "build-css": "node-sass --output-style -o css scss/styles.scss  && npm run prefix",
-    "prefix": "postcss --use autoprefixer -o css/styles.css css/*.css",
-    "watch:css": "onchange \"scss/**/*.scss\" -- npm run build-css",
-    "watch": "npm-run-all --parallel live watch:css"
+    "build-css": "node-sass --output-style -o dist/css src/scss/styles.scss  && npm run prefix",
+    "build-js": "babel src/js --watch --out-dir dist/js",
+    "prefix": "postcss --use autoprefixer -o dist/css/styles.css css/*.css",
+    "watch:css": "onchange \"src/scss/**/*.scss\" -- npm run build-css",
+    "watch": "npm-run-all --parallel live watch:css build-js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "autoprefixer": "^9.1.5",
     "live-server": "^1.2.0",
     "node-sass": "^4.9.3",
